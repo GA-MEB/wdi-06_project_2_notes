@@ -15,7 +15,9 @@ def set_up_scorecards
     File.open("student_scorecards/#{student[:first].downcase}_#{student[:last].downcase}.md", 'w') {|f|
       f.write(
         "# Scorecard for : #{student[:first]} #{student[:last]}\n"+
-        "### [GitHub](www.github.com/#{student[:github]})\n"+
+        "### [GitHub Account](www.github.com/#{student[:github]})\n"+
+        "### Heroku URL for App: \n"+
+        "### Link to Other Materials:\n"+
         "\n" +
         "#{planning_template}\n"+
         "#{execution_template}\n"+
