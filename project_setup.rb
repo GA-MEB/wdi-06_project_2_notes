@@ -14,10 +14,12 @@ def set_up_scorecards
     puts "Creating file for #{student[:first]} #{student[:last]}"
     File.open("student_scorecards/#{student[:first].downcase}_#{student[:last].downcase}.md", 'w') {|f|
       f.write(
-        "# Scorecard for : #{student[:first]} #{student[:last]}\n"+
-        "### [GitHub Account](www.github.com/#{student[:github]})\n"+
-        "### Heroku URL for App: \n"+
-        "### Link to Other Materials:\n"+
+        "# Scorecard for : #{student[:first]} #{student[:last]} (#{student[:github]})\n"+
+        "# Primary Observer : \n"+
+        "### Project Name / Group : \n"+
+        "### [Project Repo]()\n"+
+        "### [Heroku App]()\n"+
+        "### [Other Materials]()\n"+
         "\n" +
         "#{planning_template}\n"+
         "#{execution_template}\n"+
@@ -42,7 +44,7 @@ def planning_template
    {category: "Collaboration (Project 2 Only)",
     questions: "Did the student work well with others during the planning process?"}
   ].map{|category_hash|
-    "#### #{category_hash[:category]}\n\t*#{category_hash[:questions]}*\n#{instructor_notes_partial}\n"
+    "#### #{category_hash[:category]}\n*#{category_hash[:questions]}*\n\n#{instructor_notes_partial}\n"
   }.join
 end
 def execution_template
@@ -56,7 +58,7 @@ def execution_template
    {category: "Collaboration (Project 2 Only)",
     questions: "Is the student working effectively with others in their group? Are they pulling their weight vis-a-vis the group?"}
   ].map{|category_hash|
-    "#### #{category_hash[:category]}\n\t*#{category_hash[:questions]}*\n#{instructor_notes_partial}\n"
+    "#### #{category_hash[:category]}\n*#{category_hash[:questions]}*\n\n#{instructor_notes_partial}\n"
   }.join
 end
 def finished_product_template
@@ -74,20 +76,22 @@ def finished_product_template
    {category: "Collaboration (Project 2 Only)",
     questions: "Has the student contributed meaningfully to the success of the group?"}
   ].map{|category_hash|
-    "#### #{category_hash[:category]}\n\t*#{category_hash[:questions]}*\n#{instructor_notes_partial}\n"
+    "#### #{category_hash[:category]} Score:\n*#{category_hash[:questions]}*\n\n#{instructor_notes_partial}\n"
   }.join
 end
 def summary_template
   "## 4 - SUMMARY\n" +
-  [ "Three Biggest Strengths",
-    "Three Biggest Weaknesses",
+  [ "High Points",
+    "Areas for Improvement",
     "Other Notes"
   ].map{|category|
-    "#### #{category}\n#{instructor_notes_partial}\n"
+    "#### #{category}\n\n#{instructor_notes_partial}\n"
   }.join
 end
 def instructor_notes_partial
-  "\t Anna:\n\t David:\n\t Jeff:\n\t Tom:"
+  ['Anna','David','Jeff','Tom','Matt','Jason'].sort.map{|instructor|
+    "#{instructor}\n> Notes:\n> Score:\n"
+  }.join
 end
 
 set_up_scorecards
