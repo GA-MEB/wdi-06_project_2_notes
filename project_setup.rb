@@ -15,7 +15,7 @@ def set_up_scorecards
     File.open("student_scorecards/#{student[:first].downcase}_#{student[:last].downcase}.md", 'w') {|f|
       f.write(
         "# Scorecard for : #{student[:first]} #{student[:last]} (#{student[:github]})\n"+
-        "# Primary Observer : \n"+
+            #"# Primary Observer : \n"+
         "### Project Name / Group : \n"+
         "### [Project Repo]()\n"+
         "### [Heroku App]()\n"+
@@ -90,7 +90,7 @@ def summary_template
 end
 def instructor_notes_partial
   ['Anna','David','Jeff','Tom','Matt','Jason'].sort.map{|instructor|
-    "#{instructor}\n> Notes:\n> Score:\n"
+    "#{instructor}\n> Notes:\n> Score:\n\n"
   }.join
 end
 
