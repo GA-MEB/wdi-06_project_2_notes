@@ -1,5 +1,5 @@
 # Scorecard for : Annie Bourgeois (annie-b)
-### Project Name / Group : 
+### Project Name / Group :
 ### [Project Repo]()
 ### [Heroku App]()
 ### [Other Materials]()

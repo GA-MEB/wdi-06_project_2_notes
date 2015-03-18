@@ -1,5 +1,5 @@
-# Scorecard for : Jason Weeks (J-Weeks)
-### Project Name / Group : 
+# Scorecard for :
+### Project Name / Group :
 ### [Project Repo]()
 ### [Heroku App]()
 ### [Other Materials]()

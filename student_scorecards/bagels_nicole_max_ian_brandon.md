@@ -1,5 +1,5 @@
-# Scorecard for : Cara Pacifico (cgpacifico)
-### Project Name / Group : 
+# Scorecard for :
+### Project Name / Group :
 ### [Project Repo]()
 ### [Heroku App]()
 ### [Other Materials]()

@@ -1,5 +1,5 @@
-# Scorecard for : Charlie Talbot (LookOut800)
-### Project Name / Group : 
+# Scorecard for :
+### Project Name / Group :
 ### [Project Repo]()
 ### [Heroku App]()
 ### [Other Materials]()

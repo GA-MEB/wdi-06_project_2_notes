@@ -1,5 +1,5 @@
-# Scorecard for : Ian Delairre (idelairre)
-### Project Name / Group : 
+# Scorecard for :
+### Project Name / Group :
 ### [Project Repo]()
 ### [Heroku App]()
 ### [Other Materials]()
